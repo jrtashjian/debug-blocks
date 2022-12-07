@@ -1,0 +1,35 @@
+{
+	"scripts": {
+		"analyze-bundles": "npm run build -- --webpack-bundle-analyzer",
+		"build": "wp-scripts build --webpack-src-dir=packages",
+		"dev": "wp-scripts start --webpack-src-dir=packages",
+		"lint-css": "wp-scripts lint-style",
+		"lint-js": "wp-scripts lint-js",
+		"lint-php": "wp-env run composer run-script lint",
+		"packages-update": "wp-scripts packages-update --dist-tag=wp-6.1",
+		"postpackages-update": "npm run build",
+		"prelint-php": "wp-env run composer \"install --no-interaction\"",
+		"pretest:php": "wp-env start",
+		"test:php": "wp-env run phpunit 'phpunit -c /var/www/html/wp-content/plugins/pluginwp/phpunit.xml.dist --verbose'",
+		"wp-env": "wp-env"
+	},
+	"dependencies": {
+		"@pluginwp/plugin": "file:packages/plugin",
+		"@wordpress/base-styles": "^4.8.1",
+		"@wordpress/block-editor": "^10.0.10",
+		"@wordpress/blocks": "^11.16.4",
+		"@wordpress/components": "^21.0.7",
+		"@wordpress/data": "^7.1.3",
+		"@wordpress/dom-ready": "^3.17.1",
+		"@wordpress/element": "^4.15.1",
+		"@wordpress/i18n": "^4.17.1",
+		"@wordpress/interface": "^4.16.7",
+		"@wordpress/plugins": "^4.15.2"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^5.2.2",
+		"@wordpress/eslint-plugin": "^13.1.1",
+		"@wordpress/scripts": "^24.1.2",
+		"@wordpress/stylelint-config": "^21.0.1"
+	}
+}
