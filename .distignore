@@ -4,9 +4,7 @@ composer.lock
 node_modules/
 package-lock.json
 package.json
-packages/
+src/
 phpcs.xml.dist
-phpunit.xml.dist
-phpunit/
 README.md
 webpack.config.js

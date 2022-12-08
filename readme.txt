@@ -1,4 +1,4 @@
-=== DebugBlocks ===
+=== Debug Blocks ===
 Contributors: JR Tashjian
 Tags:
 Requires at least: 6.1

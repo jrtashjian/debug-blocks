@@ -31,32 +31,29 @@
 
 defined( 'ABSPATH' ) || exit;
 
-// Guard the plugin from initializing more than once.
-if ( class_exists( \DebugBlocks\Application::class ) ) {
-	return;
+/**
+ * Registers the plugin script.
+ */
+function debugblocks_init() {
+	$asset_file = include plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
+
+	wp_register_script(
+		'debug-blocks',
+		plugin_dir_url( __FILE__ ) . 'build/index.js',
+		$asset_file['dependencies'],
+		$asset_file['version'],
+		false
+	);
+
+	load_plugin_textdomain( 'debug-blocks', false, plugin_dir_path( __FILE__ ) . 'languages' );
 }
 
-require_once dirname( __FILE__ ) . '/vendor/autoload.php';
-
 /**
- * Create and retrieve the main application container instance.
- *
- * @return Application The application container.
+ * Enqueues the plugin script.
  */
-function debugblocks() {
-	return \DebugBlocks\Application::getInstance();
+function debugblocks_enqueue_scripts() {
+	wp_enqueue_script( 'debug-blocks' );
 }
 
-debugblocks()->setBasePath( __FILE__ );
-
-/**
- * Service Providers.
- */
-debugblocks()->register( \DebugBlocks\Plugin\PluginServiceProvider::class );
-debugblocks()->register( \DebugBlocks\BlockLibrary\BlockLibraryServiceProvider::class );
-
-register_deactivation_hook( __FILE__, array( debugblocks(), 'deactivation' ) );
-
-// Boot the plugin.
-add_action( 'plugins_loaded', array( debugblocks(), 'boot' ) );
-add_action( 'plugins_loaded', array( debugblocks(), 'loadTextDomain' ) );
+add_action( 'init', 'debugblocks_init' );
+add_action( 'enqueue_block_editor_assets', 'debugblocks_enqueue_scripts' );

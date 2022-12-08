@@ -4,28 +4,17 @@
     "license": "GPL-2.0-only",
     "authors": [
         {
-            "name": "Plugin Author",
-            "homepage": "https://debugblocks.com"
+            "name": "JR Tashjian",
+            "homepage": "https://jrtashjian.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "DebugBlocks\\": "includes"
-        }
-    },
-    "require": {
-        "illuminate/container": "^8.83"
-    },
     "require-dev": {
-        "coenjacobs/mozart": "^0.7.1",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
-        "johnpbloch/wordpress-core": "^6.0",
+        "johnpbloch/wordpress-core": "^6.1",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "wp-cli/dist-archive-command": "^2.0",
         "wp-cli/wp-cli-bundle": "^2.6",
-        "wp-coding-standards/wpcs": "^2.3",
-        "wp-phpunit/wp-phpunit": "^6.0",
-        "yoast/phpunit-polyfills": "^1.0"
+        "wp-coding-standards/wpcs": "^2.3"
     },
     "config": {
         "platform": {
@@ -36,33 +25,14 @@
         },
         "sort-packages": true
     },
-    "extra": {
-        "mozart": {
-            "dep_namespace": "DebugBlocks\\Dependencies\\",
-            "dep_directory": "/includes/Dependencies/",
-            "classmap_directory": "/includes/classes/dependencies/",
-            "classmap_prefix": "DebugBlocks_"
-        }
-    },
     "scripts": {
         "lint": "phpcs --standard=phpcs.xml.dist",
         "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
-        "test": "phpunit",
         "makepot": "wp i18n make-pot . --exclude=\"node_modules,vendor\" --headers='{\"Last-Translator\":\"hello@jrtashjian.com\",\"Language-Team\":\"hello@jrtashjian.com\",\"Report-Msgid-Bugs-To\":\"https://jrtashjian.com\"}'",
         "build-release": [
             "rm -r ./vendor",
-            "@composer dump-autoload",
             "wp dist-archive ./",
             "@composer install"
-        ],
-        "post-install-cmd": "composer mozart-compose",
-        "post-update-cmd": "composer mozart-compose",
-        "mozart-compose": [
-            "\"vendor/bin/mozart\" compose",
-            "composer dump-autoload",
-            "@php -r \"copy('https://raw.githubusercontent.com/php-fig/container/master/LICENSE', 'includes/Dependencies/Psr/Container/LICENSE');\"",
-            "find ./includes/Dependencies/Illuminate -type d ! -name Illuminate ! -name Contracts ! -name Container -exec rm -rf {} 2> /dev/null \\; || true",
-            "find ./includes/Dependencies/Psr -type d ! -name Psr ! -name Container -exec rm -rf {} 2> /dev/null \\; || true"
         ]
     }
 }
