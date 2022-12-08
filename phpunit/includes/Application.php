@@ -2,13 +2,13 @@
 /**
  * Tests the Core class.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
-namespace PluginWP\Tests\Core;
+namespace DebugBlocks\Tests\Core;
 
-use PluginWP\Application;
-use PluginWP\ServiceProvider;
+use DebugBlocks\Application;
+use DebugBlocks\ServiceProvider;
 
 /**
  * Tests the Core class.
@@ -134,7 +134,7 @@ class CoreTest extends \WP_UnitTestCase {
 	public function test_deactivation_hook_is_called() {
 		$plugin_basename = plugin_basename( $this->plugin_file );
 
-		register_deactivation_hook( $plugin_basename, array( pluginwp()->app, 'deactivation' ) );
+		register_deactivation_hook( $plugin_basename, array( debugblocks()->app, 'deactivation' ) );
 		$this->assertTrue( has_filter( 'deactivate_' . $plugin_basename ) );
 
 		do_action( 'deactivate_' . $plugin_basename ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals

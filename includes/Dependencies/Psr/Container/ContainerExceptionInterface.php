@@ -1,6 +1,6 @@
 <?php
 
-namespace PluginWP\Dependencies\Psr\Container;
+namespace DebugBlocks\Dependencies\Psr\Container;
 
 use Throwable;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PluginWP\Dependencies\Illuminate\Contracts\Container;
+namespace DebugBlocks\Dependencies\Illuminate\Contracts\Container;
 
 interface ContextualBindingBuilder
 {

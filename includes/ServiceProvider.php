@@ -2,10 +2,10 @@
 /**
  * The ServiceProvider class.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
-namespace PluginWP;
+namespace DebugBlocks;
 
 /**
  * The ServiceProvider class.
@@ -14,14 +14,14 @@ abstract class ServiceProvider {
 	/**
 	 * The application instance.
 	 *
-	 * @var \PluginWP\Application
+	 * @var \DebugBlocks\Application
 	 */
 	protected $app;
 
 	/**
 	 * Create a new service provider instance.
 	 *
-	 * @param \PluginWP\Application $app The Application.
+	 * @param \DebugBlocks\Application $app The Application.
 	 */
 	public function __construct( $app ) {
 		$this->app = $app;

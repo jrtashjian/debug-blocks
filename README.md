@@ -1,8 +1,8 @@
-[![Build and Test](https://github.com/jrtashjian/pluginwp/actions/workflows/build-and-test.yml/badge.svg?branch=master)](https://github.com/jrtashjian/pluginwp/actions/workflows/build-and-test.yml)
+[![Build and Test](https://github.com/jrtashjian/debugblocks/actions/workflows/build-and-test.yml/badge.svg?branch=master)](https://github.com/jrtashjian/debugblocks/actions/workflows/build-and-test.yml)
 
-# PluginWP Foundation
+# DebugBlocks Foundation
 
-🚧 [**UNDER DEVELOPMENT**](https://github.com/jrtashjian/pluginwp/issues/1) 🚧
+🚧 [**UNDER DEVELOPMENT**](https://github.com/jrtashjian/debugblocks/issues/1) 🚧
 
 This code serves as a starting point for building a WordPress plugin using React and the [block editor components](https://github.com/WordPress/gutenberg/tree/trunk/packages). I also wanted to build WordPress plugins in a more modern PHP way by introducing a portion of the [Service Container](https://laravel.com/docs/8.x/container) and [Service Providers](https://laravel.com/docs/8.x/providers) that are used in the [Laravel framework](https://laravel.com/).
 
@@ -15,28 +15,28 @@ This code serves as a starting point for building a WordPress plugin using React
 
 ### Quick Start
 
-Clone this repository or click [Use this template](https://github.com/jrtashjian/pluginwp/generate) on to create a new project on GitHub.
+Clone this repository or click [Use this template](https://github.com/jrtashjian/debugblocks/generate) on to create a new project on GitHub.
 
 ```
-git clone https://github.com/jrtashjian/pluginwp.git yourpluginslug
+git clone https://github.com/jrtashjian/debugblocks.git yourpluginslug
 ```
 
-Search for `PluginWP Author` and replace with `Actual Author Name`
+Search for `JR Tashjian` and replace with `Actual Author Name`
 ```
-find . -type f -not -path "./.git/*" -exec sed -i 's/PluginWP Author/Actual Author Name/g' {} +
-```
-
-Search for `PluginWP` and replace with `YourPluginSlug`
-```
-find . -type f -not -path "./.git/*" -exec sed -i 's/PluginWP/YourPluginSlug/g' {} +
+find . -type f -not -path "./.git/*" -exec sed -i 's/JR Tashjian/Actual Author Name/g' {} +
 ```
 
-Search for `pluginwp` and replace with `yourpluginslug`
+Search for `DebugBlocks` and replace with `YourPluginSlug`
 ```
-find . -type f -not -path "./.git/*" -exec sed -i 's/pluginwp/yourpluginslug/g' {} +
+find . -type f -not -path "./.git/*" -exec sed -i 's/DebugBlocks/YourPluginSlug/g' {} +
 ```
 
-Finally, rename the main plugin file `pluginwp.php` to `yourpluginslug.php`.
+Search for `debugblocks` and replace with `yourpluginslug`
+```
+find . -type f -not -path "./.git/*" -exec sed -i 's/debugblocks/yourpluginslug/g' {} +
+```
+
+Finally, rename the main plugin file `debugblocks.php` to `yourpluginslug.php`.
 
 ### Setup
 

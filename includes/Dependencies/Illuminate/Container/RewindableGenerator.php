@@ -1,6 +1,6 @@
 <?php
 
-namespace PluginWP\Dependencies\Illuminate\Container;
+namespace DebugBlocks\Dependencies\Illuminate\Container;
 
 use Countable;
 use IteratorAggregate;

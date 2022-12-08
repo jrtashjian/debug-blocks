@@ -17,12 +17,12 @@ const TestPlugin = () => {
 	return (
 		<ExampleSlotFill>
 			<p>
-				{ __( 'This content is rendered from a registered plugin using:', 'pluginwp' ) }&nbsp;
+				{ __( 'This content is rendered from a registered plugin using:', 'debugblocks' ) }&nbsp;
 				<a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-plugins/#registerplugin" target={ '_blank' } rel="noreferrer">registerPlugin()</a>
 			</p>
 			<Button variant="primary" onClick={ () => setIsVisible( ! isVisible ) }>
-				{ __( 'Toggle Popover!', 'pluginwp' ) }
-				{ isVisible && <Popover>{ __( 'Popover is toggled!', 'pluginwp' ) }</Popover> }
+				{ __( 'Toggle Popover!', 'debugblocks' ) }
+				{ isVisible && <Popover>{ __( 'Popover is toggled!', 'debugblocks' ) }</Popover> }
 			</Button>
 		</ExampleSlotFill>
 	);
@@ -30,5 +30,5 @@ const TestPlugin = () => {
 
 registerPlugin( 'test-plugin', {
 	render: TestPlugin,
-	scope: 'pluginwp',
+	scope: 'debugblocks',
 } );

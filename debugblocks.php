@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: PluginWP
- * Plugin URI: https://pluginwp.com
- * Description: PluginWP Plugin Description.
+ * Plugin Name: DebugBlocks
+ * Plugin URI: https://jrtashjian.com
+ * Description: DebugBlocks Plugin Description.
  * Version: 1.0.0
  * Requires at least: 6.0
  * Requires PHP: 7.4
- * Author: PluginWP Author
- * Author URI: https://pluginwp.com
- * Text Domain: pluginwp
+ * Author: JR Tashjian
+ * Author URI: https://jrtashjian.com
+ * Text Domain: debugblocks
  * Domain Path: /languages
  *
- * Copyright 2019-2022 PluginWP Author
+ * Copyright 2019-2022 JR Tashjian
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -26,13 +26,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
 defined( 'ABSPATH' ) || exit;
 
 // Guard the plugin from initializing more than once.
-if ( class_exists( \PluginWP\Application::class ) ) {
+if ( class_exists( \DebugBlocks\Application::class ) ) {
 	return;
 }
 
@@ -43,20 +43,20 @@ require_once dirname( __FILE__ ) . '/vendor/autoload.php';
  *
  * @return Application The application container.
  */
-function pluginwp() {
-	return \PluginWP\Application::getInstance();
+function debugblocks() {
+	return \DebugBlocks\Application::getInstance();
 }
 
-pluginwp()->setBasePath( __FILE__ );
+debugblocks()->setBasePath( __FILE__ );
 
 /**
  * Service Providers.
  */
-pluginwp()->register( \PluginWP\Plugin\PluginServiceProvider::class );
-pluginwp()->register( \PluginWP\BlockLibrary\BlockLibraryServiceProvider::class );
+debugblocks()->register( \DebugBlocks\Plugin\PluginServiceProvider::class );
+debugblocks()->register( \DebugBlocks\BlockLibrary\BlockLibraryServiceProvider::class );
 
-register_deactivation_hook( __FILE__, array( pluginwp(), 'deactivation' ) );
+register_deactivation_hook( __FILE__, array( debugblocks(), 'deactivation' ) );
 
 // Boot the plugin.
-add_action( 'plugins_loaded', array( pluginwp(), 'boot' ) );
-add_action( 'plugins_loaded', array( pluginwp(), 'loadTextDomain' ) );
+add_action( 'plugins_loaded', array( debugblocks(), 'boot' ) );
+add_action( 'plugins_loaded', array( debugblocks(), 'loadTextDomain' ) );

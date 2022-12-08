@@ -2,10 +2,10 @@
 /**
  * The Asset class.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
-namespace PluginWP\Plugin;
+namespace DebugBlocks\Plugin;
 
 /**
  * The Asset class.
@@ -72,7 +72,7 @@ class Asset {
 	protected function loadAssetFile( $filepath ) {
 		$default_asset_file = array(
 			'dependencies' => array(),
-			'version'      => pluginwp()->version(),
+			'version'      => debugblocks()->version(),
 		);
 
 		return file_exists( $filepath ) ? include $filepath : $default_asset_file;
@@ -86,7 +86,7 @@ class Asset {
 	 * @return string
 	 */
 	protected function getAssetFilePath( $filename ) {
-		return pluginwp()->basePath( 'build/' . $this->package . '/' . $filename . '.asset.php' );
+		return debugblocks()->basePath( 'build/' . $this->package . '/' . $filename . '.asset.php' );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class Asset {
 	 * @return string
 	 */
 	protected function getAssetUrl( $filename ) {
-		return pluginwp()->baseUrl( 'build/' . $this->package . '/' . $filename );
+		return debugblocks()->baseUrl( 'build/' . $this->package . '/' . $filename );
 	}
 
 	/**

@@ -1,16 +1,16 @@
 {
-    "name": "pluginwp/pluginwp",
+    "name": "jrtashjian/debugblocks",
     "description": "",
     "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "Plugin Author",
-            "homepage": "https://pluginwp.com"
+            "homepage": "https://debugblocks.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "PluginWP\\": "includes"
+            "DebugBlocks\\": "includes"
         }
     },
     "require": {
@@ -38,17 +38,17 @@
     },
     "extra": {
         "mozart": {
-            "dep_namespace": "PluginWP\\Dependencies\\",
+            "dep_namespace": "DebugBlocks\\Dependencies\\",
             "dep_directory": "/includes/Dependencies/",
             "classmap_directory": "/includes/classes/dependencies/",
-            "classmap_prefix": "PluginWP_"
+            "classmap_prefix": "DebugBlocks_"
         }
     },
     "scripts": {
         "lint": "phpcs --standard=phpcs.xml.dist",
         "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
         "test": "phpunit",
-        "makepot": "wp i18n make-pot . --exclude=\"node_modules,vendor\" --headers='{\"Last-Translator\":\"info@pluginwp.com\",\"Language-Team\":\"info@pluginwp.com\",\"Report-Msgid-Bugs-To\":\"https://pluginwp.com/contact\"}'",
+        "makepot": "wp i18n make-pot . --exclude=\"node_modules,vendor\" --headers='{\"Last-Translator\":\"hello@jrtashjian.com\",\"Language-Team\":\"hello@jrtashjian.com\",\"Report-Msgid-Bugs-To\":\"https://jrtashjian.com\"}'",
         "build-release": [
             "rm -r ./vendor",
             "@composer dump-autoload",

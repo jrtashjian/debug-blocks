@@ -1,0 +1,77 @@
+# Copyright (C) 2022 JR Tashjian
+# This file is distributed under the same license as the DebugBlocks plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: DebugBlocks 1.0.0\n"
+"Report-Msgid-Bugs-To: https://jrtashjian.com\n"
+"Last-Translator: hello@jrtashjian.com\n"
+"Language-Team: hello@jrtashjian.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-07T19:02:18-05:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: debugblocks\n"
+
+#. Plugin Name of the plugin
+#. translators: accessibility text for the footer landmark region.
+#: includes/Plugin/PluginServiceProvider.php:27
+#: includes/Plugin/PluginServiceProvider.php:28
+#: build/plugin/index.js:15
+#: packages/plugin/components/app/index.js:27
+msgid "DebugBlocks"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://debugblocks.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "DebugBlocks Plugin Description."
+msgstr ""
+
+#. Author of the plugin
+msgid "JR Tashjian"
+msgstr ""
+
+#: includes/Plugin/PluginServiceProvider.php:39
+msgid "DebugBlocks requires JavaScript. Please enable JavaScript in your browser settings."
+msgstr ""
+
+#: build/block-library/test-block/index.js:1
+#: packages/block-library/test-block/edit.js:11
+msgid "Hello, World! (from the editor)"
+msgstr ""
+
+#: build/block-library/test-block/index.js:1
+#: packages/block-library/test-block/save.js:11
+msgid "Hello, World! (from the frontend)"
+msgstr ""
+
+#: build/plugin/index.js:15
+#: packages/plugin/components/app/index.js:30
+msgid "Initial Settings"
+msgstr ""
+
+#: build/plugin/index.js:15
+#: packages/plugin/test-plugin.js:20
+msgid "This content is rendered from a registered plugin using:"
+msgstr ""
+
+#: build/plugin/index.js:15
+#: packages/plugin/test-plugin.js:24
+msgid "Toggle Popover!"
+msgstr ""
+
+#: build/plugin/index.js:15
+#: packages/plugin/test-plugin.js:25
+msgid "Popover is toggled!"
+msgstr ""
+
+#: build/block-library/test-block/block.json
+#: packages/block-library/test-block/block.json
+msgctxt "block title"
+msgid "DebugBlocks Test"
+msgstr ""

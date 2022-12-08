@@ -2,12 +2,12 @@
 /**
  * The Application class.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
-namespace PluginWP;
+namespace DebugBlocks;
 
-use PluginWP\Dependencies\Illuminate\Container\Container;
+use DebugBlocks\Dependencies\Illuminate\Container\Container;
 
 /**
  * The Application class.
@@ -274,6 +274,6 @@ class Application extends Container {
 	 * Load language files.
 	 */
 	public function loadTextDomain() {
-		load_plugin_textdomain( 'pluginwp', false, $this->basePath( 'languages' ) );
+		load_plugin_textdomain( 'debug-blocks', false, $this->basePath( 'languages' ) );
 	}
 }

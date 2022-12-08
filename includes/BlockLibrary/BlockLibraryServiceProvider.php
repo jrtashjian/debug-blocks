@@ -2,12 +2,12 @@
 /**
  * The BlockLibraryServiceProvider class.
  *
- * @package PluginWP
+ * @package DebugBlocks
  */
 
-namespace PluginWP\BlockLibrary;
+namespace DebugBlocks\BlockLibrary;
 
-use PluginWP\ServiceProvider;
+use DebugBlocks\ServiceProvider;
 
 /**
  * The BlockLibraryServiceProvider class.
